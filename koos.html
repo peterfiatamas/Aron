@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link type="text/css" href="index.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+        <title>Kós Hutás Áron</title>
+        <script type="text/javascript" src=" https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" >
+            $(document).ready(function () {
+                $('.nyil').on('click', gord);
+
+                function gord() {
+                    $('.menu-box').slideToggle();
+                }
+                $('.video').on('click', pop);
+
+                function pop() {
+                    $('.silencio').slideToggle();
+                }
+            });
+
+
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            body html{
+
+            }
+            body{
+                background: url(kep/a2.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .help{
+                text-align: center;
+                font-size: 30px;
+                color: #fff;
+            }
+            .video{
+                position: absolute;
+                top: 1%;
+                left: 50%;
+                margin-right: 50%;
+                transform: translate(-50%);
+            }
+            .menu-box{
+                padding-top: 150px;
+                height: 100%;
+                position: fixed;
+                text-align: center;
+                display: none;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            h1{
+                font-size: 20px;
+                position: absolute;
+                left: 50%;
+                top: 10%;
+                margin-right: -50%;
+                margin-bottom: -50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                text-shadow: 2px 2px 2px black;
+                font-family: 'Orbitron', sans-serif;
+            }
+            p{
+                text-align: center;
+                color: #fff;
+                text-shadow: 2px 2px 2px black;
+            }
+            .silencio{
+                position: absolute;
+                left: 50%;
+                top: 32%;
+                margin-right: -50%;
+                margin-bottom: -50%;
+                transform: translate(-50%, -50%);
+                width: 350px;
+                height: 200px;
+                border-radius: 5px;
+                display: none;
+            }
+            .nyil{
+                position: absolute;
+                left: 15%;
+                color: gold;
+                text-shadow: 2px 2px 1px black;
+                padding: 10px 8px;
+                font-size: 15px;
+                margin-bottom: 50px;
+            }
+            .nyil:hover{
+                cursor: pointer;
+                background: rgba(255, 255, 255, 0.5);
+            }
+            .nyil:active{
+                color: #fff;
+            }
+
+            .logo{
+                width: 60px;
+                height: auto;
+                padding-bottom: 100px;
+            }
+            .menu{
+                color: #fff;
+                display: block;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 8px 10px;
+            }
+            .menu:hover{
+                text-decoration: none;
+                color: gold;
+                background: rgba(255, 255, 255, 0.5);
+            }
+            @media(min-width: 992px){
+                .menu-box{
+                    padding-top: 200px;
+                    height: 100%;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                h1{
+                    font-size: 36px;
+                }
+
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <!--<div class="help">
+            <div class="visible-xs">xs</div>
+            <div class="visible-sm">sm</div>
+            <div class="visible-md">md</div>
+            <div class="visible-lg">lg</div>
+        </div>-->
+
+        <div class="container-fluid">
+            <button type="button" class="btn btn-warning video">Video</button>
+            <h1>Koós-Hutás Áron<br><p>honlapja</p></h1>
+            <iframe class="silencio"  src="https://www.youtube.com/embed/aqfP-XlqDo0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="row">
+                <div class="menu-box col-xs-12 col-sm-3">
+                    <div class="logo-container">
+                        <img class="logo" src="kep/a1.jpg">
+                    </div>
+                    <a class="menu" href="index.html">Kezdőoldal</a>
+                    <a class="menu" href="rolam.html">Rólam</a>
+                    <a class="menu" href="elerhetoseg.html">Elérhetőség</a>
+                    <a class="menu" href="">Koncertek</a>
+                    <a class="menu" href="videok.html">Videók</a>
+                    <a class="menu" href="">Valami</a>
+                </div>
+            </div>
+            <div class="nyil">MENÜ</div>
+        </div>
+    </body>
+</html>

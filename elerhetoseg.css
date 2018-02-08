@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body html{
+
+}
+body{
+    background: url(kep/hatter.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.slide-container{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-bottom: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+}
+.slide-show{
+
+}
+
+.slide{
+    display: none;
+}
+.active{
+    display: block;
+}
+.aron{
+    width: 290px;
+    height: auto;
+}
+
+.tarolo{
+    display: block;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    margin-right: 50%;
+    margin-bottom: 50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+    background-color: #fde482;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+h1:hover{
+    background-color: gold;
+}
+h1:active{
+    background-color:  #fde482;
+}
+.mailTel{
+    font-size: 20px;
+    display: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #fde482;
+    text-align: center;
+    position: fixed;
+    top: 49.5%;
+    left: 50%;
+    margin-right: 50%;
+    margin-bottom: 50%;
+    transform: translate(-50%);
+    width: 262px;
+}
+.row{
+    margin-right: 0; 
+    margin-left: 0; 
+}
+.help{
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.menu-box {
+    padding-top: 150px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.cim{
+    text-align: center;
+}
+
+.nyil{
+    position: fixed;
+    left: 70px;
+    color: gold;
+    text-shadow: 2px 2px 1px black;
+    padding: 10px 8px;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+.nyil:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+}
+.nyil:active{
+    color: #fff;
+}
+.reklamContainer{
+    width: 90%;
+    text-align: center;
+    padding: 0 4px 0 4px;
+    /*background-color: red;*/
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.reklam{
+    font-size: 15px;
+    color: #fff;
+    text-shadow: 2px 2px black;
+}
+.logo{
+    width: 60px;
+    height: auto;
+    padding-bottom: 100px;
+}
+.menu{
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 10px;
+}
+.menu:hover{
+    text-decoration: none;
+    color: gold;
+    background: rgba(255, 255, 255, 0.5);
+}
+@media(min-width: 992px){
+    .menu-box{
+        padding-top: 200px;
+        height: 100%;
+        width: 200px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .nyil{
+        position: fixed;
+    }
+    h1{
+        font-size: 36px;
+    }
+    .aron{
+        width: 400px;
+        height: auto;
+    }
+
+}
+@media(min-width: 800px){
+
+    .aron{
+        width: 500px;
+        height: auto;
+    }
+    .reklam{
+        font-size: 20px; 
+    }
+    .reklamContainer{
+        width: 50%;
+
+    }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link type="text/css" href="rolam.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+        <title>Kós-Hutás Áron</title>
+        <script type="text/javascript" src=" https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.nyil').on('click', gord);
+                $(window).scroll(el);
+
+                function gord() {
+                    $('.menu-box').slideToggle();
+                }
+                function el() {
+                    $('.menu-box').hide();
+                }
+                var timeout;
+                var current = 0;
+                var container = $('.slideContainer');
+                var slides = container.find('.slide');
+
+                function start() {
+                    timeout = window.setTimeout(showNext, 2000);
+                }
+                function stop() {
+                    clearTimeout(timeout);
+                }
+
+                function showNext() {
+                    slides.eq(current).removeClass('active');
+                    current++;
+                    if (current >= slides.length) {
+                        current = 0;
+                    }
+                    slides.eq(current).addClass('active');
+                    start();
+                }
+                start();
+                $('.slide').mouseenter(stop);
+                $('.slide').mouseleave(start);
+
+            });
+
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            body html{
+
+            }
+            body{
+                background: url(kep/hatter.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .slideContainer{
+                position: absolute;
+                top: 18%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                text-align: center;
+            }
+            .slideShow{
+                width: 100%;
+            } 
+
+            .slide{
+                display: none;
+            }
+            .active{
+                display: block;
+            }
+            .diak{
+                width: 250px;
+                height: auto;
+                border-radius: 5px;
+            }
+            .diak:hover{
+                cursor: pointer;
+            }
+            .help{
+                text-align: center;
+                font-size: 30px;
+                color: #fff;
+            }
+
+            .menu-box{
+                padding-top: 150px;
+                height: 100%;
+                position: fixed;
+                text-align: center;
+                display: none;
+                background-color: rgba(0, 0, 0, 0.5);
+                text-shadow: 2px 2px 2px black;
+            }
+            .cim{
+                text-align: center;
+            }
+            .textContainer{
+                width: 100%;
+                height: 100%;
+                margin-top: 0px;
+                position: absolute;
+                left: 50%;
+                top: 80%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                text-shadow: 2px 2px 2px black;
+                padding: 15px;
+                text-align: justify;
+                font-size: 18px;
+            }
+            .silencio{
+                position: absolute;
+                left: 50%;
+                top: 30%;
+                margin-right: -50%;
+                margin-bottom: -50%;
+                transform: translate(-50%, -50%);
+                width: 280px;
+                height: 157px;
+            }
+            .nyil{
+                position: fixed;
+                left: 15%;
+                color: gold;
+                text-shadow: 2px 2px 1px black;
+                padding: 10px 8px;
+                font-size: 15px;
+                margin-bottom: 50px;
+            }
+            .nyil:hover{
+                cursor: pointer;
+                background: rgba(255, 255, 255, 0.5);
+            }
+            .nyil:active{
+                color: #fff;
+            }
+
+            .logo{
+                width: 60px;
+                height: auto;
+                padding-bottom: 100px;
+            }
+            .menu{
+                color: #fff;
+                display: block;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 8px 10px;
+            }
+            .menu:hover{
+                text-decoration: none;
+                color: gold;
+                background: rgba(255, 255, 255, 0.5);
+            }
+            @media(min-width: 992px){
+                .menu-box{
+                    padding-top: 200px;
+                    height: 100%;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                .nyil{
+                    position: fixed;
+                }
+                h1{
+                    font-size: 36px;
+                }
+                .textContainer{
+                    width: 800px;
+                    height: 600px;
+                    background: rgba(255, 255, 255, 0.5);
+                    position: absolute;
+                    left: 50%;
+                    top: 75%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 10px; 
+                }
+                .diak{
+                    width: 400px;
+                    height: auto;
+                }
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--<div class="help">
+            <div class="visible-xs">xs</div>
+            <div class="visible-sm">sm</div>
+            <div class="visible-md">md</div>
+            <div class="visible-lg">lg</div>
+        </div>-->
+
+        <div class="container-fluid">
+            <div class="slideContainer">
+                <div class="slideShow">
+                    <div class="slide active">
+                        <img class="diak" src="kep/a2.jpg">
+                    </div>
+                    <div class="slide">
+                        <img class="diak" src="kep/a5.jpg">
+                    </div>
+                    <div class="slide">
+                        <img class="diak" src="kep/a6.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="textContainer">
+                <h1 class="cim">Koós-Hutás Áron</h1>
+                <p>
+                    Napjaink egyik legkeresettebb fiatal trombitása 2008-ban megnyerte a Tomsits Rudolf Jazz Trombita Tehetségkutató Versenyét. Koós-Hutás Áron neve sokak számára már más produkciókból is ismerős lehet, úgy mint a neves Budapest Jazz Orchestra, a vilagszerte turnezo Djabe jazz-world egyuttes az underground körökben ismert Pannonia Allstars Ska Orchestra vagy a balkán zenét játszó Guca Partyzans Brass Band. 
+                    A legismertebb magyar előadók mellett az évek során lehetősége volt már több, nemzetközileg is ismert művésszel dolgozni és egy színpadra állni, beleértve
+                    többek között Brian Culbertson-t, Tony Lakatost, Erik Truffaz-t, Steve Hackette-t, Gerard Presencer-t, Joe Lovano-t, Joan Faulkner-t és Raul Midónt. 2014-ben hazánkat képviselte az I. világháború 100. évfordulójára létrehozott nemzetközi nagyszabású kezdeményezésben, melyre a híres olasz jazztrombitás, Paolo Fresu kérte fel. 
+                    Koós-Hutás Áront 2015-ben az év jazztrombitásának választotta a JazzMa.hu közönsége, 2015-ben megjelenő első lemezének dala, a ‘Milk and Honey’ a Jazzy Dalverseny díjazottjai között szerepelt, lemezét a világhírű Kenny Garrett Quintet előtt mutathatta be a nagyközönségnek, 2017 májusában pedig E.T. Projectjével a németországi Gronau JazzFest nagyszínpadán a világhírű Till Brönner előtt mutatkozhatott be az európai nagyközönségnek. Szolistakent meghivast kapott a Mezzoforte 40. szuletesnapi turnejanak budapesti allomasara az A38 hajora.
+                </p>
+            </div>
+            <div class="row">
+                <div class="menu-box col-xs-12 col-sm-3">
+                    <div class="logo-container">
+                        <img class="logo" src="kep/a1.jpg">
+                    </div>
+                    <a class="menu" href="index.html">Kezdőoldal</a>
+                    <a class="menu" href="rolam.html">Rólam</a>
+                    <a class="menu" href="elerhetoseg.html">Elérhetőség</a>
+                    <a class="menu" href="">Koncertek</a>
+                    <a class="menu" href="videok.html">Videók</a>
+                    <a class="menu" href="">Valami</a>
+                </div>
+            </div>
+            <div class="nyil">MENÜ</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link type="text/css" href="videok.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+        <title>Kós-Hutás Áron</title>
+        <script type="text/javascript" src=" https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.nyil').on('click', gord);
+                $(window).scroll(el);
+
+                function gord() {
+                    $('.menu-box').slideToggle();
+                }
+                function el() {
+                    $('.menu-box').hide();
+                }
+
+            });
+
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            body html{
+
+            }
+            body{
+                background: url(kep/hatter.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .help{
+                text-align: center;
+                font-size: 30px;
+                color: #fff;
+            }
+            .video-container{
+                width: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            .title-videok{
+                color: #fff;
+                text-align: center;
+                padding: 8px 10px;
+            }
+            .size-video{
+                width: 280px;
+                height: auto;
+            }
+            .video-standard{
+                text-align: center;
+            }
+            .menu-box{
+                padding-top: 150px;
+                height: 100%;
+                position: fixed;
+                text-align: center;
+                display: none;
+                background-color: rgba(0, 0, 0, 0.5);
+                text-shadow: 2px 2px 2px black;
+            }
+            .cim{
+                text-align: center;
+            }
+
+            .nyil{
+                position: fixed;
+                left: 15%;
+                color: gold;
+                text-shadow: 2px 2px 1px black;
+                padding: 10px 8px;
+                font-size: 15px;
+                margin-bottom: 50px;
+            }
+            .nyil:hover{
+                cursor: pointer;
+                background: rgba(255, 255, 255, 0.5);
+            }
+            .nyil:active{
+                color: #fff;
+            }
+
+            .logo{
+                width: 60px;
+                height: auto;
+                padding-bottom: 100px;
+            }
+            .menu{
+                color: #fff;
+                display: block;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 8px 10px;
+            }
+            .menu:hover{
+                text-decoration: none;
+                color: gold;
+                background: rgba(255, 255, 255, 0.5);
+            }
+            @media(min-width: 992px){
+                .menu-box{
+                    padding-top: 200px;
+                    height: 100%;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                .nyil{
+                    position: fixed;
+                }
+                h1{
+                    font-size: 36px;
+                }
+                .size-video{
+                    width: 560px;  
+                    height: 315px;
+                }
+                .video-container{
+                    width: 80%;
+
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--<div class="help">
+            <div class="visible-xs">xs</div>
+            <div class="visible-sm">sm</div>
+            <div class="visible-md">md</div>
+            <div class="visible-lg">lg</div>
+        </div>-->
+        <div class="video-container">
+            <div class="title-videok"><h1>Videók</h1></div>
+            <div class="video-standard">
+                <iframe class="size-video" src="https://www.youtube.com/embed/uX_PHCgwXo8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe class="size-video" src="https://www.youtube.com/embed/fWdTR2yJPzg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe class="size-video" src="https://www.youtube.com/embed/7igPWW_UqAw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe class="size-video" src="https://www.youtube.com/embed/SNoymKy2en4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe class="size-video" src="https://www.youtube.com/embed/aqfP-XlqDo0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe class="size-video" src="https://www.youtube.com/embed/gYxOAbr73Ak" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe class="size-video" src="https://www.youtube.com/embed/cfwwV6xZBa8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe class="size-video" src="https://www.youtube.com/embed/X6VjlhId67M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu-box col-xs-12 col-sm-3">
+                <div class="logo-container">
+                    <img class="logo" src="kep/a1.jpg">
+                </div>
+                <a class="menu" href="index.html">Kezdőoldal</a>
+                <a class="menu" href="rolam.html">Rólam</a>
+                <a class="menu" href="elerhetoseg.html">Elérhetőség</a>
+                <a class="menu" href="">Koncertek</a>
+                <a class="menu" href="videok.html">Videók</a>
+                <a class="menu" href="">Valami</a>
+            </div>
+        </div>
+        <div class="nyil">MENÜ</div>
+    </div>
+</body>
+</html>

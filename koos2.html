@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link type="text/css" href="elerhetoseg.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+        <title>Kós-Hutás Áron elérhetőség</title>
+        <script type="text/javascript" src=" https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.nyil').on('click', gord);
+                $(window).scroll(el);
+
+                function gord() {
+                    $('.menu-box').slideToggle();
+                }
+                function el() {
+                    $('.menu-box').hide();
+                }
+
+                var timeout;
+                var current = 0;
+                var container = $('.slide-container');
+                var slides = container.find('.slide');
+                function start() {
+                    timeout = window.setTimeout(showNext, 3000);
+                }
+                function showNext() {
+                    slides.eq(current).removeClass('active');
+                    current++;
+                    if (current >= slides.length) {
+                        current = 0;
+                    }
+                    slides.eq(current).addClass('active');
+                    start();
+                }
+                start();
+                $('h1').on('click', pop);
+                function pop() {
+                    if ($('.mailTel').is(':hidden')) {
+                        $('.mailTel').slideDown('slow');
+                    } else {
+                        $('.mailTel').slideUp('slow');
+                    }
+
+                }
+                var time = +1;
+                function reklam() {
+                    $('.reklam').animate({fontSize: "24px"}, 2000);
+                    $('.reklam').animate({fontSize: "20px"}, 2000);
+                    for (var i = 0; i < time; i++) {
+                        reklam();
+                    }
+                }
+                reklam();
+
+            });
+
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            body html{
+
+            }
+            body{
+                background: url(kep/hatter.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .slide-container{
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                margin-bottom: 50%;
+                margin-right: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .slide-show{
+
+            }
+
+            .slide{
+                display: none;
+            }
+            .active{
+                display: block;
+            }
+            .aron{
+                width: 290px;
+                height: auto;
+            }
+
+            .tarolo{
+                display: block;
+                position: fixed;
+                top: 45%;
+                left: 50%;
+                margin-right: 50%;
+                margin-bottom: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h1{
+                background-color: #fde482;
+                padding: 8px 10px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            h1:hover{
+                background-color: gold;
+            }
+            h1:active{
+                background-color:  #fde482;
+            }
+            .mailTel{
+                font-size: 20px;
+                display: none;
+                padding: 8px 10px;
+                border-radius: 5px;
+                background-color: #fde482;
+                text-align: center;
+                position: fixed;
+                top: 49.5%;
+                left: 50%;
+                margin-right: 50%;
+                margin-bottom: 50%;
+                transform: translate(-50%);
+                width: 262px;
+            }
+            .row{
+                margin-right: 0; 
+                margin-left: 0; 
+            }
+            .help{
+                text-align: center;
+                font-size: 30px;
+                color: #fff;
+            }
+
+            .menu-box {
+                padding-top: 150px;
+                height: 100%;
+                position: fixed;
+                text-align: center;
+                display: none;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .cim{
+                text-align: center;
+            }
+
+            .nyil{
+                position: fixed;
+                left: 15%;
+                color: gold;
+                text-shadow: 2px 2px 1px black;
+                padding: 10px 8px;
+                font-size: 15px;
+                margin-bottom: 50px;
+            }
+            .nyil:hover{
+                cursor: pointer;
+                background: rgba(255, 255, 255, 0.5);
+            }
+            .nyil:active{
+                color: #fff;
+            }
+            .reklamContainer{
+                width: 90%;
+                text-align: center;
+                padding: 0 4px 0 4px;
+                /*background-color: red;*/
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            .reklam{
+                font-size: 15px;
+                color: #fff;
+                text-shadow: 2px 2px black;
+            }
+            .logo{
+                width: 60px;
+                height: auto;
+                padding-bottom: 100px;
+            }
+            .menu{
+                color: #fff;
+                display: block;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 8px 10px;
+            }
+            .menu:hover{
+                text-decoration: none;
+                color: gold;
+                background: rgba(255, 255, 255, 0.5);
+            }
+            @media(min-width: 992px){
+                .menu-box{
+                    padding-top: 200px;
+                    height: 100%;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                .nyil{
+                    position: fixed;
+                }
+                h1{
+                    font-size: 36px;
+                }
+                .aron{
+                    width: 400px;
+                    height: auto;
+                }
+
+            }
+            @media(min-width: 800px){
+
+                .aron{
+                    width: 500px;
+                    height: auto;
+                }
+                .reklam{
+                    font-size: 20px; 
+                }
+                .reklamContainer{
+                    width: 50%;
+
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--<div class="help">
+            <div class="visible-xs">xs</div>
+            <div class="visible-sm">sm</div>
+            <div class="visible-md">md</div>
+            <div class="visible-lg">lg</div>
+        </div>-->
+        <div class="slide-container">
+            <div class="slideShow">
+                <div class="slide active">
+                    <img class="aron" src="kep/7.jpg">
+                </div>
+                <div class="slide">
+                    <img class="aron" src="kep/8.jpg">
+                </div>
+                <div class="slide">
+                    <img class="aron" src="kep/9.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="tarolo">
+            <h1>Elérhetőségem</h1>
+        </div>
+        <div class="mailTel">
+            Mail: kharon28@gmail.com
+            <br />Tel: 0620 456 70 11
+        </div>
+        <div class="row">
+            <div class="menu-box col-xs-12 col-sm-3">
+                <div class="logo-container">
+                    <img class="logo" src="kep/a1.jpg">
+                </div>
+                <a class="menu" href="index.html">Kezdőoldal</a>
+                <a class="menu" href="rolam.html">Rólam</a>
+                <a class="menu" href="elerhetoseg.html">Elérhetőség</a>
+                <a class="menu" href="">Koncertek</a>
+                <a class="menu" href="videok.html">Videók</a>
+                <a class="menu" href="">Valami</a>
+            </div>
+        </div>
+        <div class="reklamContainer">
+            <div class="reklam">Koncert: Itt és ekkor!</div>
+        </div>
+        <div class="nyil">MENÜ</div>
+    </body>
+</html>
