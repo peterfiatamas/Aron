@@ -14,11 +14,18 @@ $(document).ready(function () {
     var slides = container.find('.slide');
 
     function start() {
-        timeout = window.setTimeout(showNext, 2000);
+        timeout = window.setTimeout(showNext, 3000);
+          $('.stop').html('');
     }
-    function stop(){
+
+    function stop() {
         clearTimeout(timeout);
+        $('.stop').html('Stop');
     }
+    /*function moz() {
+        $('#bubi').css('left', e.pageX + 20);
+        $('#bubi').css('top', e.pageY + 15);
+    }*/
 
     function showNext() {
         slides.eq(current).removeClass('active');
@@ -30,7 +37,20 @@ $(document).ready(function () {
         start();
     }
     start();
-    $('.slide').mouseenter(stop);
-    $('.slide').mouseleave(start);
+    $('.diak').mouseenter(stop);
+    $('.diak').mouseleave(start);
+   //$('.slide').mousemove(moz);
+
+    $('.angol').on('click', fut);
+    $('.magyar').on('click', megintfut);
+
+    function fut() {
+        $('.magyarSzoveg').css('display', 'none');
+        $('.angolSzoveg').css('display', 'block');
+    }
+    function megintfut() {
+        $('.magyarSzoveg').css('display', 'block');
+        $('.angolSzoveg').css('display', 'none');
+    }
 
 });

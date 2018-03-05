@@ -3,7 +3,6 @@ $(document).ready(function () {
     $('.nyil').on('click', le);
 
 
-
     function le() {
         if ($('.menu-box').is(':hidden')) {
             $('.menu-box').show('slide');
